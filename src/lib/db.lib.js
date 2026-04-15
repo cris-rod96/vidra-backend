@@ -64,7 +64,7 @@ DetalleReceta.belongsTo(Receta, { foreignKey: 'RecetaId' })
 Producto.hasMany(DetalleReceta, { foreignKey: 'ProductoId' })
 DetalleReceta.belongsTo(Producto, { foreignKey: 'ProductoId' })
 
-OrdenLaboratorio.hasOne(Examen, { foreignKey: 'OrdenLaboratorioId' })
+OrdenLaboratorio.hasMany(Examen, { foreignKey: 'OrdenLaboratorioId' })
 Examen.belongsTo(OrdenLaboratorio, { foreignKey: 'OrdenLaboratorioId' })
 
 Usuario.hasOne(FirmaDigital, { foreignKey: 'UsuarioId' })
@@ -96,6 +96,9 @@ HistorialClinico.belongsTo(Sucursal, { foreignKey: 'SucursalId' })
 
 Empresa.hasMany(HistorialClinico, { foreignKey: 'EmpresaId' })
 HistorialClinico.belongsTo(Empresa, { foreignKey: 'EmpresaId' })
+
+Turno.hasMany(InformeFinal, { foreignKey: 'TurnoId' })
+InformeFinal.belongsTo(Turno, { foreignKey: 'TurnoId' })
 
 Paciente.hasMany(InformeFinal, { foreignKey: 'PacienteId' })
 InformeFinal.belongsTo(Paciente, { foreignKey: 'PacienteId' })
@@ -214,10 +217,10 @@ Turno.belongsTo(Empresa, { foreignKey: 'EmpresaId' })
 Persona.hasOne(Usuario, { foreignKey: 'PersonaId' })
 Usuario.belongsTo(Persona, { foreignKey: 'PersonaId' })
 
-Empresa.hasOne(Usuario, { foreignKey: 'EmpresaId' })
+Empresa.hasMany(Usuario, { foreignKey: 'EmpresaId' })
 Usuario.belongsTo(Empresa, { foreignKey: 'EmpresaId' })
 
-Sucursal.hasOne(Usuario, { foreignKey: 'SucursalId' })
+Sucursal.hasMany(Usuario, { foreignKey: 'SucursalId' })
 Usuario.belongsTo(Sucursal, { foreignKey: 'SucursalId' })
 
 export {

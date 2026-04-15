@@ -63,6 +63,12 @@ const InformeFinalModel = (sq) => {
       tableName: 'InformesFinales',
       timestamps: true,
       paranoid: true,
+      indexes: [
+        { fields: ['EmpresaId'] },
+        { fields: ['DoctorId'] },
+        { fields: ['PacienteId'] },
+        { fields: ['TurnoId'] },
+      ],
     }
   )
 }

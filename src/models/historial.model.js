@@ -64,6 +64,13 @@ const HistorialClinicoModel = (sq) => {
     {
       tableName: 'HistorialesClinicos',
       timestamps: true, // createdAt será la fecha del informe
+      indexes: [
+        { fields: ['EmpresaId'] },
+        { fields: ['SucursalId'] },
+        { fields: ['TurnoId'] },
+        { fields: ['DoctorId'] },
+        { fields: ['PacienteId'] },
+      ],
     }
   )
 }

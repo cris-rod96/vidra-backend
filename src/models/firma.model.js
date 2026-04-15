@@ -50,6 +50,7 @@ const FirmaDigitalModel = (sq) => {
       tableName: 'FirmasDigitales',
       timestamps: true,
       paranoid: true, // Importante para auditorías de documentos firmados antiguos
+      indexes: [{ fields: ['UsuarioId'] }, { fields: ['EmpresaId'] }],
     }
   )
 }

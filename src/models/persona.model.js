@@ -80,6 +80,7 @@ const PersonaModel = (sq) => {
       tableName: 'Personas',
       timestamps: true,
       paranoid: true, // Seguridad ante borrados accidentales
+      indexes: [{ fields: ['EmpresaId'] }],
     }
   )
 }

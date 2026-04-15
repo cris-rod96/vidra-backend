@@ -87,6 +87,7 @@ const UsuarioModel = (sq) => {
       tableName: 'Usuarios',
       timestamps: true,
       paranoid: true, // IMPORTANTE: No borrar usuarios, solo desactivarlos
+      indexes: [{ fields: ['SucursalId'] }, { fields: ['EmpresaId'] }, { fields: ['EmpresaId'] }],
     }
   )
 }

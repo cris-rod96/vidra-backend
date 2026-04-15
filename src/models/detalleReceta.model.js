@@ -52,6 +52,7 @@ const DetalleRecetaModel = (sq) => {
     {
       tableName: 'DetallesRecetas',
       timestamps: false,
+      indexes: [{ fields: ['RecetaId'] }, { fields: ['ProductoId'] }],
     }
   )
 }

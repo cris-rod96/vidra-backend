@@ -47,6 +47,20 @@ const OrdenLaboratorioModel = (sq) => {
     {
       tableName: 'OrdenesLaboratorio',
       timestamps: true,
+      indexes: [
+        {
+          fields: ['PacienteId'],
+        },
+        {
+          fields: ['DoctorSolicitanteId'],
+        },
+        {
+          fields: ['SucursalId'],
+        },
+        {
+          fields: ['EmpresaId'],
+        },
+      ],
     }
   )
 }

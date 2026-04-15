@@ -57,6 +57,7 @@ const ProductoModel = (sq) => {
     {
       tableName: 'Productos',
       timestamps: true,
+      indexes: [{ fields: ['EmpresaId'] }],
     }
   )
 }

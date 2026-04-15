@@ -60,6 +60,7 @@ const AuditoriaModel = (sq) => {
       tableName: 'Auditorias',
       timestamps: true,
       updatedAt: false, // Inmutabilidad total: un log no se toca
+      indexes: [{ fields: ['EmpresaId'] }, { fields: ['SucursalId'] }, { fields: ['UsuarioId'] }],
     }
   )
 }

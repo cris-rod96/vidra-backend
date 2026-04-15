@@ -69,6 +69,17 @@ const LogModel = (sq) => {
     {
       tableName: 'Logs',
       timestamps: true,
+      indexes: [
+        {
+          fields: ['EmpresaId'],
+        },
+        {
+          fields: ['UsuarioId'],
+        },
+        {
+          fields: ['SucursalId'],
+        },
+      ],
     }
   )
 }

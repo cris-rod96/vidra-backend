@@ -40,6 +40,7 @@ const ExamenModel = (sq) => {
     {
       tableName: 'Examenes',
       timestamps: true,
+      indexes: [{ fields: ['OrdenLaboratorioId'] }],
     }
   )
 }

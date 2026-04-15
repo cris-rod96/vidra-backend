@@ -90,6 +90,17 @@ const CajaModel = (sq) => {
     {
       tableName: 'Cajas',
       timestamps: true,
+      indexes: [
+        {
+          fields: ['SucursalId'],
+        },
+        {
+          fields: ['EmpresaId'],
+        },
+        {
+          fields: ['UsuarioId'],
+        },
+      ],
     }
   )
 }

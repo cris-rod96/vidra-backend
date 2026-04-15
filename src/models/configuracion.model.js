@@ -41,6 +41,7 @@ const ConfiguracionPantallaModel = (sq) => {
     {
       tableName: 'ConfiguracionesPantallas',
       timestamps: true,
+      indexes: [{ fields: ['SucursalId'] }, { fields: ['EmpresaId'] }],
     }
   )
 }

@@ -70,6 +70,12 @@ const GastoModel = (sq) => {
       tableName: 'Gastos',
       timestamps: true,
       paranoid: true, // No queremos borrar registros contables físicamente
+      indexes: [
+        { fields: ['EmpresaId'] },
+        { fields: ['UsuarioId'] },
+        { fields: ['SucursalId'] },
+        { fields: ['ProveedorId'] },
+      ],
     }
   )
 }

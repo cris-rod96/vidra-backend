@@ -67,6 +67,11 @@ const SuscripcionModel = (sq) => {
     {
       tableName: 'Suscripciones',
       timestamps: true,
+      indexes: [
+        {
+          fields: ['EmpresaId'],
+        },
+      ],
     }
   )
 }

@@ -44,6 +44,13 @@ const RecetaModel = (sq) => {
       tableName: 'Recetas',
       timestamps: true,
       paranoid: true,
+      indexes: [
+        { fields: ['HistorialClinicoId'] },
+        { fields: ['EmpresaId'] },
+        { fields: ['SucursalId'] },
+        { fields: ['DoctorId'] },
+        { fields: ['PacienteId'] },
+      ],
     }
   )
 }

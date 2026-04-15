@@ -75,6 +75,12 @@ const MovimientoFinancieroModel = (sq) => {
       tableName: 'MovimientosFinancieros',
       timestamps: true,
       updatedAt: false, // Al igual que el Kardex, el dinero no se edita, se anula o se ajusta
+      indexes: [
+        { fields: ['EmpresaId'] },
+        { fields: ['SucursalId'] },
+        { fields: ['UsuarioId'] },
+        { fields: ['CajaId'] },
+      ],
     }
   )
 }

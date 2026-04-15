@@ -67,6 +67,7 @@ const ServicioModel = (sq) => {
       tableName: 'Servicios',
       timestamps: true,
       paranoid: true, // Si eliminan un servicio, no queremos romper los reportes de ventas antiguos
+      indexes: [{ fields: ['EmpresaId'] }],
     }
   )
 }

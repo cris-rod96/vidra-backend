@@ -54,6 +54,7 @@ const PlantillaInformeModel = (sq) => {
       tableName: 'PlantillasInformes',
       timestamps: true,
       paranoid: true, // Si el doctor borra una plantilla, no queremos perder los informes viejos que la usaron
+      indexes: [{ fields: ['ServicioId'] }, { fields: ['DoctorId'] }, { fields: ['EmpresaId'] }],
     }
   )
 }

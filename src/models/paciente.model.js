@@ -73,6 +73,7 @@ const PacienteModel = (sq) => {
       tableName: 'Pacientes',
       timestamps: true,
       paranoid: true, // Para no borrar el historial médico asociado por error
+      indexes: [{ fields: ['EmpresaId'] }, { fields: ['PersonaId'] }],
     }
   )
 }

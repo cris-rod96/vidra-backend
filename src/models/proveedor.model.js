@@ -49,6 +49,7 @@ const ProveedorModel = (sq) => {
     {
       timestamps: true,
       tableName: 'Proveedores',
+      indexes: [{ fields: ['SucursalId'] }, { fields: ['EmpresaId'] }],
     }
   )
 }

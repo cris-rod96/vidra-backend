@@ -76,6 +76,7 @@ const SucursalModel = (sq) => {
       tableName: 'Sucursales',
       timestamps: true,
       paranoid: true, // Soft delete para no perder historial de movimientos de caja de la sucursal
+      indexes: [{ fields: ['EmpresaId'] }],
     }
   )
 }

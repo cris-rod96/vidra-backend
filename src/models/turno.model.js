@@ -77,6 +77,13 @@ const TurnoModel = (sq) => {
     {
       tableName: 'Turnos',
       timestamps: true, // createdAt es la hora de creación del turno
+      indexes: [
+        { fields: ['EmpresaId'] },
+        { fields: ['SucursalId'] },
+        { fields: ['ServicioId'] },
+        { fields: ['DoctorId'] },
+        { fields: ['PacienteId'] },
+      ],
     }
   )
 }

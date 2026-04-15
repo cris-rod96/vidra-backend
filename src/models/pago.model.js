@@ -73,6 +73,12 @@ const PagoModel = (sq) => {
     {
       tableName: 'Pagos',
       timestamps: true,
+      indexes: [
+        { fields: ['EmpresaId'] },
+        { fields: ['SucursalId'] },
+        { fields: ['CajaId'] },
+        { fields: ['TurnoId'] },
+      ],
     }
   )
 }
