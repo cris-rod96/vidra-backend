@@ -30,10 +30,7 @@ const LogModel = (sq) => {
         allowNull: false,
         defaultValue: DataTypes.NOW,
       },
-      fechaCierre: {
-        type: DataTypes.DATE,
-        allowNull: true,
-      },
+
       // Opcional: Guardar el token (o su firma) para poder invalidarlo si es necesario
       tokenAsociado: {
         type: DataTypes.TEXT,
